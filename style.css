@@ -82,6 +82,7 @@ body {
 
 .mynav .offcanvas {
   height: 100vh;
+  width: 40%;
 }
 
 .mynav .navbar-brand,
@@ -243,10 +244,16 @@ description {
   html {
     font-size: 55%;
   }
-  @media (max-width: 576px) {
-    .simply-countdown > .simply-section {
-      padding: 35px;
-      margin: 3px;
-    }
+  .offcanvas {
+    width: 10%;
+  }
+
+  .offcanvas-body {
+    font-size: 0.8rem;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 3px;
   }
 }
