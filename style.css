@@ -60,9 +60,24 @@ body {
   box-shadow: var(--shadow);
 }
 
-.mynav {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(4px);
+.mynav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* Ganti warna latar belakang offcanvas */
+.offcanvas-body {
+  background-color: transparent; /* Sesuaikan dengan warna latar belakang */
+}
+
+.mynav .amin {
+  font-size: x-small;
 }
 
 .mynav .offcanvas {
@@ -198,15 +213,23 @@ description {
   html {
     font-size: 75%;
   }
+  .simply-countdown > .simply-section {
+    padding: 50px;
+  }
 
   .home .hati {
     display: none;
   }
 }
+
 /* tablet */
 @media (max-width: 768px) {
   html {
     font-size: 65%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 5px;
   }
 
   .mynav .nav-link {
@@ -219,5 +242,11 @@ description {
 @media (max-width: 576px) {
   html {
     font-size: 55%;
+  }
+  @media (max-width: 576px) {
+    .simply-countdown > .simply-section {
+      padding: 35px;
+      margin: 3px;
+    }
   }
 }
