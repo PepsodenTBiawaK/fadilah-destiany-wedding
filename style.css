@@ -7,11 +7,11 @@
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
-  min-height: 2000px;
+  min-height: 3000px;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -20,6 +20,8 @@ body {
   background-image: url(img/dildes1.jpg);
   z-index: -1;
   filter: brightness(0.7);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero {
@@ -35,6 +37,7 @@ body {
 
 .hero h1 {
   font-family: "Tangerine", cursive;
+  font-weight: 700;
   font-size: 6rem;
 }
 
@@ -58,6 +61,26 @@ body {
   box-shadow: var(--shadow);
 }
 
+.mynav {
+}
+
+.mynav .navbar-brand,
+.mynav .offcanvas-title {
+  font-family: "Tangerine", cursive;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.mynav .nav-link {
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url(img/bg.png);
+  background-size: cover;
+  min-height: 100vh;
+}
+
 /* media Query */
 /* laptop */
 @media (max-width: 992px) {
@@ -69,6 +92,11 @@ body {
 @media (max-width: 768px) {
   html {
     font-size: 65%;
+  }
+
+  .mynav .nav-link {
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
