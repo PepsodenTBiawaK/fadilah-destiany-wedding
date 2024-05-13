@@ -110,7 +110,8 @@ body {
 .info h2,
 .story h2,
 .gallery h2,
-.rsvp h2 {
+.rsvp h2,
+.gifts h2 {
   color: var(--pink);
   font-family: "Tangerine", cursive;
   font-size: 5rem;
@@ -201,12 +202,14 @@ description {
 
 .story,
 .gallery,
-.rsvp {
+.rsvp,
+.gifts {
   padding-top: 10rem;
   padding-bottom: 8rem;
 }
 .story span,
-.gallery span {
+.gallery span,
+.gifts span{
   text-transform: uppercase;
   color: #666;
   font-size: 0.9rem;
@@ -217,7 +220,8 @@ description {
 
 .story p,
 .gallery p,
-.rsvp {
+.rsvp p,
+.gifts p {
   font-size: 1rem;
   font-weight: 300;
 }
@@ -322,13 +326,15 @@ description {
 .rsvp{
   background-color: var(--bg) ;
 }
-.rsvp h2{
+/* .rsvp h2{
   font-size: 4.5rem;
-}
+} */
 .rsvp p{
   color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5rem;
 }
-.rsvp form label{
+.rsvp  label{
   color: white;
   font-weight:400;
 }
@@ -344,6 +350,55 @@ description {
   border: 1px solid white;
 }
 
+footer {
+padding: 3rem;
+background-color: var(--pink);
+color: white;
+}
+
+footer a {
+text-decoration: none;
+color: var(--bg);
+font-weight: bold;
+font-style: italic;
+}
+
+footer a:hover{
+  color: whitesmoke;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+
+.icon-audio{
+  width: 3.5rem;
+  font-size: 3.5rem;
+  height: 3.5rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  mix-blend-mode:difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* ~~~~~~~~~ M E D I A   Q U E R Y ~~~~~~~~~*/
