@@ -399,6 +399,56 @@ footer li {
     transform: rotate(360deg);
   }
 }
+.status-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.status-box div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.status-hadir {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status-tidak-hadir {
+  background-color: #E57373;
+  color: white;
+}
+
+.status-ragu {
+  background-color: #ffc107;
+  color: white;
+}
+
+.messages {
+  margin-top: 20px;
+}
+
+.message {
+  border-bottom: 2px solid var(--pink);
+  padding: 10px 0;
+  color: #fff;
+}
+
+.message span {
+  display: block;
+  color: rgb(255, 255, 255);
+}
+
+.message strong {
+  color: var(--pink);
+}
+
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* ~~~~~~~~~ M E D I A   Q U E R Y ~~~~~~~~~*/
