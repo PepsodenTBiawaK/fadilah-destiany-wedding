@@ -8,7 +8,49 @@ body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
 }
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Hero section styling */
 .hero::before {
   content: "";
   position: absolute;
@@ -21,17 +63,24 @@ body {
   filter: brightness(0.7);
   background-size: cover;
   background-position: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero {
   position: relative;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 .hero h1,
 .hero h4,
 .hero p {
   text-shadow: var(--shadow);
+  animation: slideInUp 1.5s ease-in-out;
 }
 
 .hero h1 {
@@ -42,16 +91,21 @@ body {
 
 .hero h4 {
   font-size: 1.6rem;
+  animation-delay: 0.5s;
 }
 
 .hero p {
   font-size: 1.4rem;
+  animation-delay: 1s;
 }
 
 .hero a {
   color: var(--pink);
   background-color: white;
   box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: pulse 2s infinite;
+  animation-delay: 1.5s;
 }
 
 .hero a:hover {
@@ -156,9 +210,21 @@ body {
   transform: translateX(-50%) translateY(65px);
   color: var(--pink);
 }
-
+.home .hati{
+  z-index: 1;
+}
 .home .hati i {
   margin: auto;
+}
+
+.couple img {
+  animation: scaleUp 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.couple img:hover {
+  transform: scale(1.05);
 }
 
 .info {
